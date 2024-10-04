@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask</title>
+</head>
+<body>
+<p> <h1>Iris Data deployment </h1></p>
+
+<div class="container text-center">
+    <form action="/sk" method="POST">
+        <input type="text" name = 'sepal_length' placeholder="sepal_length"><br>
+        <input type="text" name = 'sepal_width'  placeholder="sepal_width"><br>
+        <input type = "text" name="petal_length" placeholder="petal_length"><br>
+        <input type="text" name="petal_width" placeholder="petal_width"><br>
+        <button class = 'btn btn-success'>submit</button>
+
+
+    </form>
+
+    <div class="row">
+        {% if prediction %}
+        <h2 class="text-warning"> {{prediction}} </h2>
+        {% endif %}
+
+    </div>
+
+</div>
+</body>
+</html>
